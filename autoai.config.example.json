@@ -1,0 +1,73 @@
+{
+  "targetUrl": "https://your-saas.example.com",
+  "maxSteps": 20,
+  "headless": false,
+  "auth": {
+    "mode": "manual",
+    "loginUrl": "https://your-saas.example.com/login",
+    "storageStatePath": "artifacts/auth/storage-state.json",
+    "manualTimeoutMs": 120000,
+    "credentials": {
+      "usernameEnv": "AUTOAI_USERNAME",
+      "passwordEnv": "AUTOAI_PASSWORD",
+      "usernameSelector": "[name=\"email\"]",
+      "passwordSelector": "[name=\"password\"]",
+      "submitSelector": "button[type=\"submit\"]"
+    }
+  },
+  "personas": [
+    {
+      "role": "qa_project_manager",
+      "goals": [
+        "open dashboard",
+        "create project",
+        "edit project",
+        "view settings"
+      ],
+      "formValues": {
+        "email": "qa@example.com",
+        "name": "Demo Launch",
+        "project": "Demo Launch",
+        "title": "Autonomous QA Demo"
+      }
+    }
+  ],
+  "safety": {
+    "denyActionKeywords": [
+      "delete",
+      "remove",
+      "archive",
+      "billing",
+      "payment",
+      "invite",
+      "send",
+      "publish",
+      "purchase",
+      "subscribe",
+      "upgrade",
+      "downgrade",
+      "logout"
+    ],
+    "allowActionKeywords": [],
+    "denySelectors": [],
+    "requireConfirmationKeywords": []
+  },
+  "routes": {
+    "stayOnOrigin": true,
+    "allowlist": [],
+    "denylist": [
+      "/logout",
+      "/billing",
+      "/payment",
+      "/admin/delete"
+    ]
+  },
+  "planner": {
+    "provider": "heuristic",
+    "openaiModel": "gpt-4.1-mini"
+  },
+  "vision": {
+    "enabled": false,
+    "openaiModel": "gpt-4.1-mini"
+  }
+}

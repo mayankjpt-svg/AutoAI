@@ -1,0 +1,17 @@
+{
+  "name": "autoai",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Working demo of an autonomous QA engineer: Playwright exploration, bug evidence, generated tests, and dashboard.",
+  "scripts": {
+    "demo": "node apps/worker/src/index.js",
+    "dashboard": "node apps/dashboard/server.js",
+    "target": "node apps/demo-saas/server.js",
+    "api": "node apps/api/src/index.js",
+    "smoke": "node apps/worker/src/index.js --quiet"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
