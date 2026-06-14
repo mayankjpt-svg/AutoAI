@@ -1,0 +1,469 @@
+{
+  "id": "run-1781448503599",
+  "status": "failed",
+  "baseUrl": "http://127.0.0.1:4173",
+  "startedAt": "2026-06-14T14:48:20.829Z",
+  "completedAt": "2026-06-14T14:48:23.599Z",
+  "mode": "playwright",
+  "config": {
+    "targetUrl": "http://127.0.0.1:4173",
+    "maxSteps": 12,
+    "headless": true,
+    "authMode": "none",
+    "safety": {
+      "denyActionKeywords": [
+        "delete",
+        "remove",
+        "archive",
+        "billing",
+        "payment",
+        "invite",
+        "send",
+        "publish",
+        "purchase",
+        "subscribe",
+        "upgrade",
+        "downgrade",
+        "logout"
+      ],
+      "allowActionKeywords": [],
+      "denySelectors": [],
+      "requireConfirmationKeywords": []
+    },
+    "routes": {
+      "stayOnOrigin": true,
+      "allowlist": [],
+      "denylist": [
+        "/logout",
+        "/billing",
+        "/payment"
+      ]
+    },
+    "planner": {
+      "provider": "heuristic",
+      "openaiModel": "gpt-4.1-mini"
+    },
+    "vision": {
+      "enabled": false,
+      "openaiModel": "gpt-4.1-mini"
+    },
+    "configPath": null
+  },
+  "persona": {
+    "role": "anonymous_founder",
+    "goals": [
+      "open dashboard",
+      "start trial",
+      "review pricing"
+    ]
+  },
+  "actions": [
+    {
+      "type": "click",
+      "label": "Start trial",
+      "selector": "[data-testid=\"start-trial\"]",
+      "href": "/dashboard",
+      "role": null,
+      "tag": "a",
+      "policy": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "reason": "anonymous_founder is pursuing a realistic user goal and \"Start trial\" is the strongest available next step.",
+      "beforeUrl": "http://127.0.0.1:4173/",
+      "afterUrl": "http://127.0.0.1:4173/dashboard",
+      "success": true,
+      "failureReason": null,
+      "durationMs": 941,
+      "timestamp": "2026-06-14T14:48:22.629Z"
+    },
+    {
+      "type": "click",
+      "label": "Create Project",
+      "selector": "[data-testid=\"create-project\"]",
+      "href": null,
+      "role": null,
+      "tag": "button",
+      "policy": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "reason": "anonymous_founder is pursuing a realistic user goal and \"Create Project\" is the strongest available next step.",
+      "beforeUrl": "http://127.0.0.1:4173/dashboard",
+      "afterUrl": "http://127.0.0.1:4173/dashboard",
+      "success": true,
+      "failureReason": null,
+      "durationMs": 407,
+      "timestamp": "2026-06-14T14:48:23.119Z"
+    },
+    {
+      "type": "fill",
+      "label": "Project Name",
+      "selector": "[data-testid=\"project-name\"]",
+      "href": null,
+      "role": null,
+      "tag": "input",
+      "policy": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "reason": "anonymous_founder is pursuing a realistic user goal and \"Project Name\" is the strongest available next step.",
+      "value": "Demo Launch",
+      "beforeUrl": "http://127.0.0.1:4173/dashboard",
+      "afterUrl": "http://127.0.0.1:4173/dashboard",
+      "success": true,
+      "failureReason": null,
+      "durationMs": 22,
+      "timestamp": "2026-06-14T14:48:23.248Z"
+    },
+    {
+      "type": "fill",
+      "label": "Owner Email",
+      "selector": "[data-testid=\"owner-email\"]",
+      "href": null,
+      "role": null,
+      "tag": "input",
+      "policy": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "reason": "anonymous_founder is pursuing a realistic user goal and \"Owner Email\" is the strongest available next step.",
+      "value": "qa@example.com",
+      "beforeUrl": "http://127.0.0.1:4173/dashboard",
+      "afterUrl": "http://127.0.0.1:4173/dashboard",
+      "success": true,
+      "failureReason": null,
+      "durationMs": 24,
+      "timestamp": "2026-06-14T14:48:23.390Z"
+    }
+  ],
+  "blockedActions": [
+    {
+      "type": "click",
+      "label": "Edit",
+      "selector": "[data-testid=\"edit-billing\"]",
+      "href": null,
+      "role": null,
+      "tag": "button",
+      "url": "http://127.0.0.1:4173/dashboard",
+      "reason": "blocked by safety keyword: billing"
+    },
+    {
+      "type": "click",
+      "label": "Edit",
+      "selector": "[data-testid=\"edit-billing\"]",
+      "href": null,
+      "role": null,
+      "tag": "button",
+      "url": "http://127.0.0.1:4173/dashboard",
+      "reason": "blocked by safety keyword: billing"
+    },
+    {
+      "type": "click",
+      "label": "Edit",
+      "selector": "[data-testid=\"edit-billing\"]",
+      "href": null,
+      "role": null,
+      "tag": "button",
+      "url": "http://127.0.0.1:4173/dashboard",
+      "reason": "blocked by safety keyword: billing"
+    },
+    {
+      "type": "click",
+      "label": "Edit",
+      "selector": "[data-testid=\"edit-billing\"]",
+      "href": null,
+      "role": null,
+      "tag": "button",
+      "url": "http://127.0.0.1:4173/dashboard",
+      "reason": "blocked by safety keyword: billing"
+    },
+    {
+      "type": "click",
+      "label": "Edit",
+      "selector": "[data-testid=\"edit-billing\"]",
+      "href": null,
+      "role": null,
+      "tag": "button",
+      "url": "http://127.0.0.1:4173/dashboard",
+      "reason": "blocked by safety keyword: billing"
+    }
+  ],
+  "bugs": [
+    {
+      "id": "bug-1",
+      "title": "state traversal did not complete as expected",
+      "expected": "The action should change page state, navigate, or show a success confirmation.",
+      "actual": "Loop prevention stopped repeated visits to the same state.",
+      "rootCauseGuess": "The clicked control may be unhandled, disabled by state, or missing a success path.",
+      "confidence": 0.72,
+      "type": "flow",
+      "severity": "high",
+      "timestamp": "2026-06-14T14:48:23.510Z",
+      "action": "state traversal",
+      "selector": "http://127.0.0.1:4173/dashboard",
+      "reason": "Loop prevention stopped repeated visits to the same state.",
+      "url": "http://127.0.0.1:4173/dashboard"
+    }
+  ],
+  "graph": {
+    "states": [
+      {
+        "id": "state-1",
+        "key": "http://127.0.0.1:4173/",
+        "title": "LaunchBoard",
+        "url": "http://127.0.0.1:4173/",
+        "screenshot": "screenshots\\step-0-home.png",
+        "actions": [
+          {
+            "type": "click",
+            "label": "LaunchBoard",
+            "selector": "a",
+            "href": "/",
+            "role": null,
+            "tag": "a",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          },
+          {
+            "type": "click",
+            "label": "Pricing",
+            "selector": "[data-testid=\"pricing-link\"]",
+            "href": "/pricing",
+            "role": null,
+            "tag": "a",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          },
+          {
+            "type": "click",
+            "label": "Dashboard",
+            "selector": "[data-testid=\"dashboard-link\"]",
+            "href": "/dashboard",
+            "role": null,
+            "tag": "a",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          },
+          {
+            "type": "click",
+            "label": "Settings",
+            "selector": "[data-testid=\"settings-link\"]",
+            "href": "/settings",
+            "role": null,
+            "tag": "a",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          },
+          {
+            "type": "click",
+            "label": "Start trial",
+            "selector": "[data-testid=\"start-trial\"]",
+            "href": "/dashboard",
+            "role": null,
+            "tag": "a",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          },
+          {
+            "type": "click",
+            "label": "View pricing",
+            "selector": "[data-testid=\"view-pricing\"]",
+            "href": "/pricing",
+            "role": null,
+            "tag": "a",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          }
+        ],
+        "visits": 1
+      },
+      {
+        "id": "state-2",
+        "key": "http://127.0.0.1:4173/dashboard",
+        "title": "Dashboard",
+        "url": "http://127.0.0.1:4173/dashboard",
+        "screenshot": "screenshots\\final.png",
+        "actions": [
+          {
+            "type": "click",
+            "label": "LaunchBoard",
+            "selector": "a",
+            "href": "/",
+            "role": null,
+            "tag": "a",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          },
+          {
+            "type": "click",
+            "label": "Pricing",
+            "selector": "[data-testid=\"pricing-link\"]",
+            "href": "/pricing",
+            "role": null,
+            "tag": "a",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          },
+          {
+            "type": "click",
+            "label": "Dashboard",
+            "selector": "[data-testid=\"dashboard-link\"]",
+            "href": "/dashboard",
+            "role": null,
+            "tag": "a",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          },
+          {
+            "type": "click",
+            "label": "Settings",
+            "selector": "[data-testid=\"settings-link\"]",
+            "href": "/settings",
+            "role": null,
+            "tag": "a",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          },
+          {
+            "type": "click",
+            "label": "Create Project",
+            "selector": "[data-testid=\"create-project\"]",
+            "href": null,
+            "role": null,
+            "tag": "button",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          },
+          {
+            "type": "click",
+            "label": "Edit",
+            "selector": "[data-testid=\"edit-checkout\"]",
+            "href": null,
+            "role": null,
+            "tag": "button",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          },
+          {
+            "type": "fill",
+            "label": "Project Name",
+            "selector": "[data-testid=\"project-name\"]",
+            "href": null,
+            "role": null,
+            "tag": "input",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          },
+          {
+            "type": "fill",
+            "label": "Owner Email",
+            "selector": "[data-testid=\"owner-email\"]",
+            "href": null,
+            "role": null,
+            "tag": "input",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          },
+          {
+            "type": "click",
+            "label": "Submit Project",
+            "selector": "[data-testid=\"submit-project\"]",
+            "href": null,
+            "role": null,
+            "tag": "button",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          },
+          {
+            "type": "click",
+            "label": "Cancel",
+            "selector": "[data-testid=\"cancel-project\"]",
+            "href": null,
+            "role": null,
+            "tag": "button",
+            "policy": {
+              "allowed": true,
+              "reason": "allowed"
+            }
+          }
+        ],
+        "visits": 5
+      }
+    ],
+    "edges": [
+      {
+        "from": "state-1",
+        "to": "unknown",
+        "type": "click",
+        "success": true
+      },
+      {
+        "from": "state-2",
+        "to": "state-2",
+        "type": "click",
+        "success": true
+      },
+      {
+        "from": "state-2",
+        "to": "state-2",
+        "type": "fill",
+        "success": true
+      },
+      {
+        "from": "state-2",
+        "to": "state-2",
+        "type": "fill",
+        "success": true
+      }
+    ],
+    "coverage": 25
+  },
+  "intelligence": {
+    "planner": "heuristic",
+    "plannerNote": "Planner completed.",
+    "vision": "disabled",
+    "visionNote": "Vision can be enabled with AUTOAI_VISION=true and OPENAI_API_KEY."
+  },
+  "evidence": {
+    "finalScreenshot": "screenshots\\final.png",
+    "video": "videos/page@7b39bbad4eddcfe69816d84969cb3906.webm"
+  },
+  "summary": {
+    "states": 2,
+    "actions": 4,
+    "bugs": 1,
+    "tests": 1,
+    "coverage": 25
+  }
+}
